@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="@string/search"
+        android:contentDescription="@string/search_desc"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/person"
+        android:title="@string/account"
+        android:contentDescription="@string/account_desc"
+        app:showAsAction="ifRoom" />
+
+</menu>

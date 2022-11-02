@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">뮤톡</string>
     <string name="nav_home">홈</string>
-    <string name="nav_menu2">메뉴2</string>
+    <string name="nav_walls">게시판</string>
     <string name="nav_menu3">메뉴3</string>
-    <string name="nav_menu4">메뉴4</string>
-    <string name="nav_menu5">메뉴5</string>
+    <string name="search">검색</string>
+    <string name="account">계정</string>
+    <string name="search_desc">설명</string>
+    <string name="account_desc">설명</string>
 </resources>

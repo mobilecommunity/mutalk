@@ -3,25 +3,15 @@
         android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/nav_home"/>
+        android:title="@string/nav_home" />
     <item
-        android:id="@+id/page2"
+        android:id="@+id/walls"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/nav_menu2"/>
+        android:title="@string/nav_walls" />
     <item
         android:id="@+id/page3"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/nav_menu3"/>
-    <item
-        android:id="@+id/page4"
-        android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="@string/nav_menu4"/>
-    <item
-        android:id="@+id/page5"
-        android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="@string/nav_menu5"/>
+        android:title="@string/nav_menu3" />
 </menu>
