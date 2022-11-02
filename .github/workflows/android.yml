@@ -30,6 +30,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: artifacts
-        path: |
-          app/**/apk/release/*
-          app/**/mapping/release/mapping.txt
+        path: app/**/apk/debug/*
