@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/actionwrap"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_wrap_text_24"
+        android:title="게시판"/>
     <item
         android:id="@+id/actionchat"
         android:enabled="true"
@@ -23,10 +29,4 @@
         android:enabled="true"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="환경설정"/>
-
-    <item
-        android:id="@+id/actionwrap"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_wrap_text_24"
-        android:title="게시판"/>
 </menu>

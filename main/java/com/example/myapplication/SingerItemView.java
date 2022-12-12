@@ -2,6 +2,7 @@ package com.example.myapplication;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,6 +42,10 @@ public class SingerItemView extends LinearLayout {
         textView2.setText(mobile);
     }
     public void setImage(int resId){
-        imageView.setImageResource(resId);
+        if(resId == -1) imageView.setVisibility(View.GONE);
+        else {
+            imageView.setVisibility(View.VISIBLE);
+            imageView.setImageResource(resId);
+        }
     }
 }
