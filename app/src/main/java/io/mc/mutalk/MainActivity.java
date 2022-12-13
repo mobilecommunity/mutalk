@@ -6,12 +6,13 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         Fragment homeFragment = new HomeFragment();
         Fragment wallsFragment = new WallsFragment();
+        Fragment musicWallFragment = new MusicWallFragment();
+        AtomicReference<Boolean> loginState = new AtomicReference<>(false);
 
         // Top App Bar
         topAppBar.setOnMenuItemClickListener((Toolbar.OnMenuItemClickListener) item -> {
@@ -36,12 +39,16 @@ public class MainActivity extends AppCompatActivity {
                     Intent chatIntent = new Intent(this, ChatActivity.class);
                     this.startActivity(chatIntent);
                     return true;
-                case R.id.account:
-                    //TODO: implment AccountActivity
-                    Toast.makeText(this, "AccountActivity is not implemented.\nHere's SigninActivity for you instead.", Toast.LENGTH_SHORT).show();
-                    // show SigninActivity instead
-                    Intent signinIntent = new Intent(this, SigninActivity.class);
-                    this.startActivity(signinIntent);
+                case R.id.account:  // account menu
+                    // check if user has signed in
+                    if (loginState.get() == false) {
+                        // show LoginActivity
+                        Intent loginIntent = new Intent(this, SigninActivity.class);
+                        this.startActivity(loginIntent);
+                    } else {
+                        //TODO: implment AccountActivity
+                        Toast.makeText(this, "AccountActivity is not implemented.\nHere's SigninActivity for you instead.", Toast.LENGTH_SHORT).show();
+                    }
                     return true;
             }
             return false;
@@ -61,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.page3:
                     //TODO: replace page3 to meaningful id name
-                    Toast.makeText(this, "Page3Fragment is not implemented.", Toast.LENGTH_SHORT).show();
+                    getSupportFragmentManager().beginTransaction().replace(contentFrame.getId(), musicWallFragment).commit();
                     return true;
             }
             return false;

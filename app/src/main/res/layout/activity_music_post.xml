@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MusicPostActivity">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/videoView">
+    </WebView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="8dp"
+        android:textSize="25dp"
+        android:text="Video Title"
+        android:id="@+id/postName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingHorizontal="8dp"
+        android:textSize="15dp"
+        android:text="Video Author"
+        android:id="@+id/postAuthor" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingRight="20dp"
+        android:layout_gravity="right">
+
+        <ImageButton
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/likeButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textSize="14dp"
+            android:text="0"
+            android:id="@+id/likeCount" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingHorizontal="8dp"
+        android:textSize="15dp"
+        android:text="Comment about video"
+        android:id="@+id/postComment" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@android:color/darker_gray"/>
+
+</LinearLayout>
